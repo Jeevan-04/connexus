@@ -1,0 +1,60 @@
+.message-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  .message-list {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .message-sent {
+    text-align: right;
+    background-color: #e1ffc7;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+  
+  .message-received {
+    text-align: left;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+  
+  textarea {
+    width: calc(100% - 22px);
+    height: 80px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: none;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #004284;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #003366;
+  }
+  

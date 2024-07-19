@@ -1,0 +1,130 @@
+.post-status-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  .user-details {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    background-color: whitesmoke;
+    margin-top: 100px;
+    border: 1px solid #b7b7b7;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-top: -60px;
+      border: 1px solid #b7b7b7;
+      padding: 1px;
+    }
+
+    .name {
+      font-weight: 600;
+      font-family: system-ui;
+    }
+
+    .headline {
+      font-family: system-ui;
+      margin-top: -15px;
+    }
+  }
+
+  .post-status {
+    width: 100%;
+    max-width: 550px;
+    height: 120px;
+    background-color: whitesmoke;
+    margin-top: 30px;
+    border: 1px solid #b7b7b7;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .post-image {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .open-post-modal {
+      width: 80%;
+      height: 50px;
+      text-align: left;
+      color: rgba(84, 84, 84, 0.89);
+      background-color: whitesmoke;
+      outline: none;
+      border: 1px solid #b7b7b7;
+      border-radius: 30px;
+      margin-left: -30px;
+      cursor: pointer;
+      padding: 15px;
+      font-weight: 600;
+      font-size: 14px;
+      font-family: system-ui, sans-serif;
+    }
+
+    .open-post-modal:hover {
+      background-color: #dcdbdb;
+    }
+  }
+
+  // Profile specific styles
+  &.company .user-details img {
+    border-radius: 0; // Square
+  }
+
+  &.freelancer .user-details img {
+    border-radius: 15%; // Rounded corners
+  }
+
+  &.job-seeker .user-details img {
+    border-radius: 50%; // Circle
+  }
+}
+
+@media (max-width: 768px) {
+  .post-status-main {
+    padding: 0 10px;
+
+    .user-details {
+      margin-top: 80px;
+      padding: 15px;
+
+      img {
+        width: 80px;
+        height: 80px;
+        margin-top: -40px;
+      }
+    }
+
+    .post-status {
+      margin-top: 20px;
+
+      .post-image {
+        width: 50px;
+        height: 50px;
+      }
+
+      .open-post-modal {
+        height: 40px;
+        padding: 10px;
+        font-size: 12px;
+      }
+    }
+  }
+}

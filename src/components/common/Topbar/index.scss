@@ -1,0 +1,138 @@
+.topbar-main {
+  width: 100%;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.87);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.linkedin-logo {
+  width: 100px;
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  outline: none;
+}
+
+.topbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.topbar-mobile-icons {
+  display: none; /* Hide mobile icons by default */
+}
+
+.react-icon {
+  color: #787878;
+  cursor: pointer;
+}
+
+.react-icon:hover {
+  color: black;
+}
+
+.user-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.popup-position {
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  z-index: 999;
+}
+
+.search-results {
+  position: absolute;
+  left: 20px;
+  top: 70px;
+  width: 240px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #bbbbbb;
+}
+
+.search-inner {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.search-inner img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.search-inner .name {
+  font-family: system-ui;
+  font-size: 18px;
+}
+
+.search-inner:hover {
+  background-color: #bbbbbb;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .topbar-main {
+    height: 60px;
+    padding: 0 10px;
+    justify-content: space-between;
+  }
+
+  .search-bar {
+    display: none; /* Hide search bar initially in mobile view */
+    width: 150px;
+  }
+
+  .linkedin-logo {
+    width: 80px;
+  }
+
+  .topbar-icons {
+    display: none; /* Hide icons on mobile view */
+  }
+
+  .topbar-mobile-icons {
+    display: flex; /* Show mobile icons */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .user-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .react-icon {
+    display: inline-block; /* Ensure icons are displayed properly */
+  }
+
+  .search-bar-active {
+    display: block; /* Show search bar when active */
+  }
+}
